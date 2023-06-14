@@ -1,4 +1,7 @@
-public int fn main(string[] args) {
-  puts("Hello, world!")
-  0
-}
+use Client from "./client"
+
+Client client = new Client
+
+client.event.on("ready", &void (): puts("Bot online!"))
+
+client.event.login("MTExNzk0NjMyODMwNDA2MjUxNQ.G2Z3O_._npmmI0prxfPj36MrXTD4FoJgRtTQJO6SPkY5E")

@@ -1,0 +1,15 @@
+use EventEmitter from "./event-emitter"
+
+public class Client {
+  public EventEmitter event = new EventEmitter
+
+  public Client fn construct((string->any)|void options) {
+
+  }
+
+  public void fn login(string token) {
+    $->event.emit("ready")
+  }
+}
+
+Client client = new Client

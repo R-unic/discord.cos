@@ -1,0 +1,20 @@
+public class EventEmitter {
+  public mut string->(Function[]) events = {{}}
+
+  public void fn emit(string event) {
+    unless $->events.has?(event) { return }
+    every Function callback in $->events[event]
+      callback
+  }
+
+  public EventEmitter fn on(string event, Function callback) {
+    unless $->events.has?(event)
+      $->events[event] = []
+
+    $->events[event] << &void (): {
+      callback
+    }
+
+    $
+  }
+}
