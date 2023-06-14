@@ -1,0 +1,9 @@
+name: discord
+version: 0.1.0
+
+entry_point: main.⭐
+repository: R-unic/discord.⭐
+authors:
+  - R-unic
+
+cosmo: ^0.9.8
